@@ -1,0 +1,144 @@
+﻿@model HardBank.Models.Kunde
+
+@{
+    ViewBag.Title = "Minside";
+}
+
+<div class="container">
+    <div class="jumbotron">
+    <div container>
+        <h1>Velkommen, </h1>
+    </div>
+        <div class="container">
+            <div class="menu">
+                <!--Menytabell-->
+                <ul class="nav nav-tabs">
+                    <li>
+                        <a data-toggle="tab" href="#">Betale til en</a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#">Registrerte betalinger</a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#">Utførte betalinger</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="table">
+                <h2>Mine konti</h2>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Kontonavn</th>
+                        <th>Kontonummer</th>
+                        <th>Saldo</th>
+                    </tr>
+                    <tr>
+                        <td>Spare</td>
+                        <td>1202.05.28050</td>
+                        <td>1000 000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <br />
+
+        <div class="container">
+            <div class="form-group">
+                <h2>Betal til en</h2>
+
+                <div class="col-sm-5">
+                    <label>Betale fra konto</label>
+                    <input type="text" class="form-control" value="Betale fra konto" />
+                </div>
+
+                <div class="col-sm-5">
+                    <label>Betale til konto</label>
+                    <input type="text" class="form-control" value="Betale til konto" />
+                </div>
+
+                <div class="col-sm-3">
+                    <label>Dato</label>
+                    <input type="text" class="form-control" value="Dato for betaling" />
+                </div>
+
+                <div class="col-sm-3">
+                    <label>KID/Melding</label>
+                    <input type="text" class="form-control" value="KID/Melding" />
+                </div>
+
+                <div class="col-sm-4">
+                    <label>Beløp</label>
+                    <input type="text" class="form-control" value="Beløp" />
+                    <button type="button" class="btn btn-info btn-xs">Betal</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="table">
+                <h2>Oversikt registrerte betaleringer frem i tid</h2>
+                <!--endre og sletteknapper her-->
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Dato</th>
+                        <th>Betal fra</th>
+                        <th>Betale til</th>
+                        <th>Beløp</th>
+                        <th>Type(nettgiro etc)</th>
+                        <th>Status</th>
+                        <th>Valg for betaling</th>
+                    </tr>
+                    <tr>
+                        <td>2.2.2015</td>
+                        <td>1202.05.28050</td>
+                        <td>1202.05.28050</td>
+                        <td>100 000</td>
+                        <td>eFaktura</td>
+                        <td>Aktiv</td>
+                        <td>
+                            <button type="button" class="btn btn-danger btn-xs">Slett</button>
+                            <button type="button" class="btn btn-warning btn-xs">Endre</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <br />
+        <div class="container">
+            <div class="table">
+                <h2>Utførte betaleringer / banktransaksjoner : evt via kontoutskrift</h2>
+                <h4>Måned</h4>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Dato</th>
+                        <th>Betal fra</th>
+                        <th>Betale til</th>
+                        <th>Beløp</th>
+                        <th>Type</th>
+                        <th>BetalingsNummer</th>
+                    </tr>
+                    <tr>
+                        <td>1.1.2015</td>
+                        <td>1202.05.28050</td>
+                        <td>1202.05.28050</td>
+                        <td>100 000 000</td>
+                        <td>eFaktura</td>
+                        <td>100</td>
+                    </tr>
+                </table>
+                <br />
+                <button type="button" class="btn btn-info">Kontoutskrift</button>
+            </div>
+        </div>
+
+
+    </div> <!--end jumbotron-->
+</div>

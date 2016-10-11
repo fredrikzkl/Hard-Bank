@@ -1,0 +1,27 @@
+﻿@model HardBank.Models.Kunde
+
+@{  
+    ViewBag.Title = "Login";
+}
+
+<div class="container centered">
+    <form action="/User/Login" class="form-signin" method="post">
+        <h2 class="form-signin-header">Logg inn</h2>
+
+        <label for="personnr" class="sr-only">Personnummer</label>
+        <input name="personnr" class="form-control lineup" placeholder="PersonNummer" required />
+
+
+        <label for="inputPassword" class="sr-only">Passord</label>
+        <input name="passord" type="password" id="inputPassword" class="form-control lineup" placeholder="Password" required />
+
+
+        <br />
+        <button type="submit" value="New Member" name="nyKunde" class="btn btn-lg btn-primary btn-block">Kjør</button>
+    </form>
+</div>
+
+
+
+
+

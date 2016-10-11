@@ -1,0 +1,36 @@
+﻿@model HardBank.Models.Kunde
+
+@{
+    ViewBag.Title = "NewMember";
+}
+
+
+
+<div class="container centered">
+    <form action="/User/NewMember" class="form-signin" method="post">
+        <h2 class="form-signin-header">Ny Medlem</h2>
+        
+        <label for="personnr" class="sr-only">Personnummer</label>
+        <input name="personnr" class="form-control lineup" placeholder="PersonNummer" required />
+
+        <label for="fornavn" class="sr-only">Fornavn</label>
+        <input name="fornavn" class="form-control lineup" placeholder="Fornavn" required />
+
+        <label for="enavn" class="sr-only">Etternavn</label>
+        <input name="etternavn" class="form-control lineup" placeholder="Etternavn" required />
+        
+        <label for="adresse" class="sr-only">Adresse</label>
+        <input name="adresse" class="form-control lineup" placeholder="Adresse" required />
+
+        <label for="inputPassword" class="sr-only">Passord</label>
+        <input name="passord"type="password" id="inputPassword" class="form-control lineup" placeholder="Password" required />
+
+        <label for="inputPassword2" class="sr-only">Passord</label>
+        <input type="password" id="inputPassword2" class="form-control lineup" placeholder="Gjenta Passord" required />
+        <br />
+        <button type="submit" value="New Member" name="nyKunde" class="btn btn-lg btn-primary btn-block">Lets go</button>
+    </form>
+</div>
+
+
+
