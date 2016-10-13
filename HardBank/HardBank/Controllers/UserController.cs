@@ -90,9 +90,11 @@ namespace HardBank.Controllers
             {
                 Session["LoggetInn"] = true;
                 ViewBag.Innlogget = true;
-                Session["ID"] = loginForm.id;
-                Console.WriteLine("ID: " + loginForm.id);
-                return RedirectToAction("MinSide", new {loginForm.id});
+
+                var db = new DBKunde();
+                int kundeId = (int)db.hentKundeMedPersonnr(loginForm.personnr).id;
+                Session["Id"] = kundeId;
+                return RedirectToAction("MinSide", new {id = kundeId});
             }
             else
             {
@@ -117,6 +119,8 @@ namespace HardBank.Controllers
             Session["LoggetInn"] = false;
             ViewBag.Innlogget = false;
             checkSession();
+
+
             return RedirectToAction("Index", "");
         }
 
@@ -124,9 +128,11 @@ namespace HardBank.Controllers
         public ActionResult Minside(int id)
         {
             checkSession();
-            if (Session["LoggetInn"] != null)
+            if (Session["LoggetInn"] != null && id == ViewBag.Id)
             {
                 bool loggetInn = (bool)Session["LoggetInn"];
+                int SessionKundeId = (int) Session["Id"];
+
                 if (loggetInn)
                 {
                     var db = new DBKunde();
@@ -135,7 +141,7 @@ namespace HardBank.Controllers
                     return View(kunde);
                 }
             }
-            return RedirectToAction("Index","");
+            return RedirectToAction("Error", new {message = "Du må logge inn for å ha tilgang til denne siden"});
         }
 
         public void checkSession()
@@ -152,6 +158,14 @@ namespace HardBank.Controllers
                 ViewBag.Id = Session["Id"];
                 ViewBag.Innlogget = (bool)Session["LoggetInn"];
             }
+        }
+
+
+        public ActionResult Error(string message)
+        {
+            checkSession();
+            ViewBag.ErrorMessage = "" + message;
+            return View("~/Views/Shared/Error.cshtml");
         }
 
     }

@@ -1,0 +1,57 @@
+﻿<h2>Betal til en</h2>
+
+<div class="form">
+
+    <div class="form-group">
+        <label for="selkontnr">Betale fra</label>
+        <select class="form-control" id="selkontnr">
+            <option>1202.05.28050</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Betale til konto</label>
+        <input id="tilKonto" type="text" class="form-control" placeholder="Kontonummer" />
+    </div>
+
+    <div class="form-group">
+        <label>KID/Melding</label>
+        <input type="text" class="form-control" placeholder="KID/Melding" />
+    </div>
+
+    <div class="form-group">
+        <label>Beløp</label>
+        <input name="belop" id="belop" type="text" class="form-control" placeholder="NOK" />
+    </div>
+
+
+    <br/>
+
+    <!-- Trigger the modal with a button -->
+    <button type="button" id="betalbtn" class="btn btn-success btn-lg" data-toggle="modal" data-target="#betal-modal">Betal</button>
+
+    <!-- Modal -->
+    <div id="betal-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Bekreftelse</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="modalMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Ja</button>
+                    <button type="submit" class="btn btn-danger" data-dismiss="modal">Nei</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+

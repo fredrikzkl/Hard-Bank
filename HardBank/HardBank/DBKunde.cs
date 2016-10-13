@@ -65,14 +65,32 @@ namespace HardBank
                 fornavn = kunden.Fornavn,
                 etternavn = kunden.Etternavn,
                 personnr = kunden.PersonNr,
-                
-
             };
             return value;
-
-
         }
-        
+
+        public Kunde hentKundeMedPersonnr(int personNr)
+        {
+            var db = new KundeContext();
+
+
+
+            var kunden = db.Kunder.Where(k => k.PersonNr == personNr).First();
+
+            var value = new Kunde()
+            {
+                id = kunden.ID,
+                fornavn = kunden.Fornavn,
+                etternavn = kunden.Etternavn,
+                personnr = kunden.PersonNr,
+
+
+            };
+
+            if (kunden == null) return null;
+
+            return value;
+        }
       
     }
 }

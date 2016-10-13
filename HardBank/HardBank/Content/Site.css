@@ -7,6 +7,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -37,3 +38,18 @@ textarea {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
+
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar-brand img{
+    width:2.6em;
+    height:2.3em;
+    margin-top:-0.5em;
+}
+
+
