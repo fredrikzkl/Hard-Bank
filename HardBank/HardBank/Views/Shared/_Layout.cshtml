@@ -25,7 +25,7 @@
                     <li>
                     @if (ViewBag.Innlogget)
                     {
-                        @Html.ActionLink("Min Side", "NewMember", "User", null, new { @class = "a" })
+                        @Html.ActionLink("Min Side", "Minside", "User", new {id = ViewBag.Id }, new { @class = "a" })
                     }
                     else
                     {
@@ -39,7 +39,7 @@
                     <div class="form-group">
                           @if (ViewBag.Innlogget)
                           {
-                            @Html.ActionLink("Logg ut", "Login", "User", null, new { @class = "btn btn-default" });
+                            @Html.ActionLink("Logg ut", "Logout", "User", null, new { @class = "btn btn-default" });
                           }
                           else
                           {

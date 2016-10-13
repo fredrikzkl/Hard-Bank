@@ -43,7 +43,6 @@ namespace HardBank.Controllers
                     database.Kunder.Add(nyKunde);
                     database.SaveChanges();
                     return RedirectToAction("Index", "");
-
                 }
             }
             catch(Exception feil)
@@ -91,6 +90,8 @@ namespace HardBank.Controllers
             {
                 Session["LoggetInn"] = true;
                 ViewBag.Innlogget = true;
+                Session["ID"] = loginForm.id;
+                Console.WriteLine("ID: " + loginForm.id);
                 return RedirectToAction("MinSide", new {loginForm.id});
             }
             else
@@ -113,6 +114,8 @@ namespace HardBank.Controllers
 
         public ActionResult Logout()
         {
+            Session["LoggetInn"] = false;
+            ViewBag.Innlogget = false;
             checkSession();
             return RedirectToAction("Index", "");
         }
@@ -139,11 +142,14 @@ namespace HardBank.Controllers
         {
             if (Session["LoggetInn"] == null)
             {
+                Session["Id"] = null;
+                ViewBag.Id = null;
                 Session["LoggetInn"] = false;
                 ViewBag.Innlogget = false;
             }
             else
             {
+                ViewBag.Id = Session["Id"];
                 ViewBag.Innlogget = (bool)Session["LoggetInn"];
             }
         }

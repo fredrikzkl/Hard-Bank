@@ -13,11 +13,15 @@ namespace HardBank.Controllers
         {
             if (Session["LoggetInn"] == null)
             {
+                Session["Id"] = null;
+                ViewBag.Id = null;
                 Session["LoggetInn"] = false;
                 ViewBag.Innlogget = false;
             }
             else
             {
+                ViewBag.Id = Session["Id"];
+
                 ViewBag.Innlogget = (bool)Session["LoggetInn"];
             }
 
