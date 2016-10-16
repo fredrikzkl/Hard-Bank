@@ -1,4 +1,5 @@
 ﻿using HardBank.Models;
+using HardBank.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -47,11 +48,8 @@ namespace HardBank.Controllers
             }
             catch(Exception feil)
             {
-                Response.Write("<div style='padding-top:1em;' class='container centered'><div class='alert alert-danger'>Kunne ikke legge til bruker</div></div>");
-                return View();
-            }
-
-            return View();
+                return RedirectToAction("Error", new { message = "Kunne ikke legge til bruker" + feil });            }
+           
         }
 
         private static byte[] lagHash(string innPassord)
@@ -93,6 +91,7 @@ namespace HardBank.Controllers
 
                 var db = new DBKunde();
                 int kundeId = (int)db.hentKundeMedPersonnr(loginForm.personnr).id;
+                ViewBag.Id = kundeId;
                 Session["Id"] = kundeId;
                 return RedirectToAction("MinSide", new {id = kundeId});
             }
@@ -137,8 +136,11 @@ namespace HardBank.Controllers
                 {
                     var db = new DBKunde();
                     var kunde = db.hentKunde(id);
+                    List<Betaling> bl = db.hentBetalinger(id);
 
-                    return View(kunde);
+                    MinSideModel model = new MinSideModel(kunde,bl);
+
+                    return View(model);
                 }
             }
             return RedirectToAction("Error", new {message = "Du må logge inn for å ha tilgang til denne siden"});
@@ -161,12 +163,50 @@ namespace HardBank.Controllers
         }
 
 
+        [HttpPost]
+        public ActionResult LeggTilBetaling(Betaling form)
+        {
+            try
+            {
+                using(var database = new Models.KundeContext())
+                {
+                    var nyBetaling = new Models.Betalinger();
+                    nyBetaling.TilKontonr = form.tilKontonr;
+                    nyBetaling.FraKontonr = form.fraKontonr;
+                    nyBetaling.Kid = form.kid;
+                    nyBetaling.Belop = form.belop;
+
+                    if(form.dato == null)
+                    {
+                        nyBetaling.Dato = DateTime.Today.ToString("MM-dd-yyyy");
+                    }
+                    else
+                    {
+                        nyBetaling.Dato = form.dato;
+                    }
+                    nyBetaling.KundeId = (int)Session["Id"];
+
+                    database.Betalinger.Add(nyBetaling);
+                    database.SaveChanges();
+
+                   
+                    return RedirectToAction("MinSide", new { id = Session["Id"]});
+                }
+            }catch (Exception feil)
+            {
+                return RedirectToAction("Error", new { message = "Betaling kunne ikke gjennomføres! " + feil });            }
+
+            
+        }
+
+
         public ActionResult Error(string message)
         {
             checkSession();
             ViewBag.ErrorMessage = "" + message;
             return View("~/Views/Shared/Error.cshtml");
         }
+
 
     }
 }

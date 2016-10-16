@@ -27,7 +27,7 @@ namespace HardBank
                 db.SaveChanges();
                 return true;
             }
-            catch(Exception feil)
+            catch(Exception)
             {
                 return false;
             }
@@ -56,7 +56,7 @@ namespace HardBank
         {
             var db = new KundeContext();
 
-            var kunden = db.Kunder.Find(id);
+            var kunden = db.Kunder.Where(k => k.ID == id).First();
             if (kunden == null) return null;
 
             var value = new Kunde()
@@ -72,24 +72,31 @@ namespace HardBank
         public Kunde hentKundeMedPersonnr(int personNr)
         {
             var db = new KundeContext();
-
-
-
             var kunden = db.Kunder.Where(k => k.PersonNr == personNr).First();
-
             var value = new Kunde()
             {
                 id = kunden.ID,
                 fornavn = kunden.Fornavn,
                 etternavn = kunden.Etternavn,
                 personnr = kunden.PersonNr,
-
-
             };
-
             if (kunden == null) return null;
-
             return value;
+        }
+
+        public List<Betaling> hentBetalinger(int id)
+        {
+            var db = new KundeContext();
+            var query = db.Betalinger.Where(b => b.KundeId == id);
+            List<Betaling> alleTransaksjoner = query.Select(b => new Betaling()
+            {
+                tilKontonr = b.TilKontonr,
+                fraKontonr = b.FraKontonr,
+                belop = b.Belop,
+                kid = b.Kid,
+                dato = b.Dato
+            }).ToList();
+            return alleTransaksjoner;
         }
       
     }

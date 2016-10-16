@@ -1,27 +1,31 @@
 ﻿<div class="table ">
-    <h2>Oversikt registrerte betaleringer frem i tid</h2>
+    <h2>Oversikt registrerte betaleringer</h2>
     <!--endre og sletteknapper her-->
     <table class="table table-bordered">
-        <tr>
-            <th>Dato</th>
-            <th>Betal fra</th>
-            <th>Betale til</th>
-            <th>Beløp</th>
-            <th>Type(nettgiro etc)</th>
-            <th>Status</th>
-            <th>Valg for betaling</th>
-        </tr>
-        <tr>
-            <td>2.2.2015</td>
-            <td>1202.05.28050</td>
-            <td>1202.05.28050</td>
-            <td>100 000</td>
-            <td>eFaktura</td>
-            <td>Aktiv</td>
-            <td>
-                <button type="button" class="btn btn-danger btn-xs">Slett</button>
-                <button type="button" class="btn btn-warning btn-xs">Endre</button>
-            </td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Dato</th>
+                <th>Betal fra</th>
+                <th>Betale til</th>
+                <th>Beløp</th>
+                <th>Kid</th>
+            </tr>
+        </thead>
+        <tbody>
+            @using HardBank.Models;
+            @{
+
+                foreach(Betaling b in Model.betalinger)
+                {
+                    <tr>
+                        <td>@b.dato</td>
+                        <td>@b.fraKontonr</td>
+                        <td>@b.tilKontonr</td>
+                        <td>@b.belop</td>
+                        <td>@b.kid</td>
+                    </tr>
+                }
+            }
+        </tbody>
     </table>
 </div>

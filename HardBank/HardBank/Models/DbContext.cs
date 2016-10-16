@@ -28,6 +28,18 @@ namespace HardBank.Models
         public virtual List<Kunder> Kunder { get; set; }
     }
 
+    public class Betalinger
+    {
+        [Key]
+        public int Betalingsnr { get; set; }
+        public string TilKontonr { get; set; }
+        public string FraKontonr { get; set; }
+        public string Dato { get; set; }
+        public string Kid { get; set; }
+        public string Belop { get; set; }
+        public int KundeId { get; set; }
+    }
+
     public class KundeContext : DbContext
     {
         public KundeContext()
@@ -38,6 +50,8 @@ namespace HardBank.Models
         public DbSet<Kunder> Kunder { get; set; }
 
         public DbSet<Kontoer> Kontoer { get; set; }
+
+        public DbSet<Betalinger> Betalinger { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -8,7 +8,9 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 </head>
 <body>
     <div class="navbar navbar-default navbar-fixed-top">
@@ -67,25 +69,27 @@
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
-</body>
 
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-sm">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm">
 
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Logg ut</h4>
-            </div>
-            <div class="modal-body">
-                <p>Er du sikker på at du vil logge ut?</p>
-            </div>
-            <div class="modal-footer">
-                @Html.ActionLink("Ja", "Logout", "User", null, new { @class = "btn btn-success" })
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Nei</button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Logg ut</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Er du sikker på at du vil logge ut?</p>
+                </div>
+                <div class="modal-footer">
+                    @Html.ActionLink("Ja", "Logout", "User", null, new { @class = "btn btn-success" })
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Nei</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</body>
+
+
 </html>
 
