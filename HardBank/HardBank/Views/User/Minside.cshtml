@@ -7,19 +7,18 @@
 }
 
 
-
-@if(ViewBag.Message != null) {
-    <div style='padding-top:1em;' class='container centered'>
-        <div class='alert alert-success'>Success!</div>
-    </div>
-}
-
-
 <div class="container">
     <div class="jumbotron">
+
+        <div class="alert alert-success fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> Ny betaling registret! Betalingsnr: 3
+        </div>
+
+
     <div class="container">
         
-        <h3>@Model.kunde.fornavn @Model.kunde.etternavn</h3>
+        <h2>@Model.kunde.fornavn @Model.kunde.etternavn</h2>
         <h5>Kundenummer: @Model.kunde.id</h5>
         <h5>Personnummer: @Model.kunde.personnr</h5>
        

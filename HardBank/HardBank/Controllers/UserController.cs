@@ -199,6 +199,38 @@ namespace HardBank.Controllers
             
         }
 
+        public ActionResult SletteBetaling(int id)
+        {
+            checkSession();
+
+            var db = new DBKunde();
+            bool slettOK = db.slettBetaling(id);
+            if (slettOK)
+            {
+                return RedirectToAction("MinSide", new { id = Session["Id"] });
+            }
+            return RedirectToAction("Error", new { message = "Ordre kunne ikke slettes"});
+
+
+        }
+
+        [HttpPost]
+        public ActionResult EndreBetaling(int id, Betaling endring)
+        {
+            checkSession();
+
+            if (ModelState.IsValid)
+            {
+                var kundeDb = new DBKunde();
+                bool endringOK = kundeDb.endreBetaling(id, endring);
+                if (endringOK)
+                {
+                    return RedirectToAction("MinSide", new { id = Session["Id"] });
+                }
+            }
+            return RedirectToAction("Error", new { message = "Ordre kunne ikke endres" });
+        }
+
 
         public ActionResult Error(string message)
         {

@@ -1,7 +1,7 @@
 ﻿<div class="table ">
     <h2>Oversikt registrerte betaleringer</h2>
     <!--endre og sletteknapper her-->
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>Dato</th>
@@ -9,6 +9,7 @@
                 <th>Betale til</th>
                 <th>Beløp</th>
                 <th>Kid</th>
+                <th>Endre</th>
             </tr>
         </thead>
         <tbody>
@@ -23,9 +24,76 @@
                         <td>@b.tilKontonr</td>
                         <td>@b.belop</td>
                         <td>@b.kid</td>
+                        <td>
+                            <button type="button" data-id="@b.betalingsnr" value="@b.betalingsnr" class="btn btn-primary btn-sm endrebtn" data-toggle="modal" data-target="#endre-modal">Valg</button>
+                        </td>
                     </tr>
+                     <!--Modal-->
+                    <div id="endre-modal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Endre Ordre</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Fyll ut feltene du ønsker å endre. Etterlat feltet tomt dersom attributtet ikke skal forandres</p>
+                                    <form id="endre-ordre-form" method="post" class="form-signin">
+                                      
+                                            <label>Dato</label>
+                                            <input name="dato" id="datepicker2" type="text" class="form-control" placeholder="Endre dato" />
+
+                                            <label>KID/Melding</label>
+                                            <input name="kid" type="text" class="form-control" placeholder="KID/Melding" />
+
+                                            <label>Beløp</label>
+                                            <input name="belop" id="belop" type="text" class="form-control" placeholder="NOK" />
+                                      
+                                        <br />
+                                        <input type="submit" value="Endre"
+                                               class="submit btn btn-primary special-submit" />
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <div style="float:left;">
+                                        <button class="btn btn-danger" data-toggle="modal" data-target="#bekreftelse-modal" data-dismiss="modal">Slett</button>
+                                    </div>
+                                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Avbryt</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--Modal-->
+                    <div id="bekreftelse-modal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Bekreftelse</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Sikker på at du vil slette denne betalingen?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    
+                                    <a id="slettBtn" class="btn btn-success">Ja</a>
+                                    <button type="submit" class="btn btn-danger" data-dismiss="modal">Nei</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 }
             }
         </tbody>
     </table>
+
+
+   
 </div>

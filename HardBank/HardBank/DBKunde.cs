@@ -90,6 +90,7 @@ namespace HardBank
             var query = db.Betalinger.Where(b => b.KundeId == id);
             List<Betaling> alleTransaksjoner = query.Select(b => new Betaling()
             {
+                betalingsnr = b.Betalingsnr,
                 tilKontonr = b.TilKontonr,
                 fraKontonr = b.FraKontonr,
                 belop = b.Belop,
@@ -98,6 +99,63 @@ namespace HardBank
             }).ToList();
             return alleTransaksjoner;
         }
-      
+
+        public Betaling hentBetaling(int id)
+        {
+            var db = new KundeContext();
+            var b = db.Betalinger.Where(k => k.Betalingsnr == id).First();
+            var value = new Betaling()
+            {
+                betalingsnr = b.Betalingsnr,
+                tilKontonr = b.TilKontonr,
+                fraKontonr = b.FraKontonr,
+                dato = b.Dato,
+                kid = b.Kid,
+                belop = b.Belop,
+                kundeId = b.KundeId 
+            };
+            if (value == null) return null;
+            return value;
+        }
+
+        public bool slettBetaling(int id)
+        {
+            var db = new KundeContext();
+            try
+            {
+                Betalinger slettBetaling = db.Betalinger.Find(id);
+                db.Betalinger.Remove(slettBetaling);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool endreBetaling(int id, Betaling endring)
+        {
+            var db = new KundeContext();
+            try
+            {
+                Betalinger endreKunde = db.Betalinger.Find(id);
+                
+                if(endring.dato != null) endreKunde.Dato = endring.dato;
+                if (endring.kid != null) endreKunde.Kid = endring.kid;
+                if (endring.belop != null) endreKunde.Belop = endring.belop;
+
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
+
+
+    
 }
