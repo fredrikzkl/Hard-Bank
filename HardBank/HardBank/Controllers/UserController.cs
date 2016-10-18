@@ -40,15 +40,22 @@ namespace HardBank.Controllers
                     nyKunde.Adresse = innListe.adresse;
 
                     nyKunde.Passord = lagHash(innListe.passord);
-     
+
+                    var startKonto = new Models.Kontoer();
+                    startKonto.Eier = innListe;
+                    startKonto.KontoNavn = innListe.fornavn + "'s konto";
+                    startKonto.Saldo = 1000;
+                    
+
                     database.Kunder.Add(nyKunde);
+                    database.Kontoer.Add(startKonto);
                     database.SaveChanges();
                     return RedirectToAction("Index", "");
                 }
             }
-            catch(Exception feil)
+            catch(Exception)
             {
-                return RedirectToAction("Error", new { message = "Kunne ikke legge til bruker" + feil });            }
+                return RedirectToAction("Error", new { message = "Kunne ikke legge til bruker, en feil oppsto!" });            }
            
         }
 
@@ -73,7 +80,7 @@ namespace HardBank.Controllers
                 }
                 else
                 {
-                    return true;
+                       return true;
                 }
             }
         }

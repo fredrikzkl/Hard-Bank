@@ -154,6 +154,28 @@ namespace HardBank
             }
         }
 
+        public bool nyKonto(Kunde eier, int belop, string navn)
+        {
+            var nyKonto = new Kontoer()
+            {
+                KontoNavn = navn,
+                Saldo = belop,
+                Eier = eier,
+            };
+
+            var db = new KundeContext();
+            try
+            {
+                db.Kontoer.Add(nyKonto);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
     }
 
 

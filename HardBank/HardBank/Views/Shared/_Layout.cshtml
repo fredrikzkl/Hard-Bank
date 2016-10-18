@@ -47,10 +47,12 @@
                     <div class="form-group">
                           @if (ViewBag.Innlogget)
                           {
+                            
                             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Logg ut</button>
                           }
                           else
                           {
+                               
                             @Html.ActionLink("Logg inn", "Login", "User", null, new { @class = "btn btn-default" });
                           }
 

@@ -24,8 +24,9 @@ namespace HardBank.Models
     {
         [Key]
         public int Kontonr { get; set; }
+        public string KontoNavn { get; set; }
         public int Saldo { get; set; }
-        public virtual List<Kunder> Kunder { get; set; }
+        public virtual Kunde Eier { get; set; }
     }
 
     public class Betalinger
@@ -55,7 +56,6 @@ namespace HardBank.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }
