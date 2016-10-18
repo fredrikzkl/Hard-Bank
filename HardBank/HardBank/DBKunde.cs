@@ -69,6 +69,13 @@ namespace HardBank
             return value;
         }
 
+        public Kunder hentKunder(int id)
+        {
+            var db = new KundeContext();
+            var query = db.Kunder.Where(k => k.ID == id).First();
+            return query;
+        }
+
         public Kunde hentKundeMedPersonnr(int personNr)
         {
             var db = new KundeContext();
@@ -100,23 +107,7 @@ namespace HardBank
             return alleTransaksjoner;
         }
 
-        public Betaling hentBetaling(int id)
-        {
-            var db = new KundeContext();
-            var b = db.Betalinger.Where(k => k.Betalingsnr == id).First();
-            var value = new Betaling()
-            {
-                betalingsnr = b.Betalingsnr,
-                tilKontonr = b.TilKontonr,
-                fraKontonr = b.FraKontonr,
-                dato = b.Dato,
-                kid = b.Kid,
-                belop = b.Belop,
-                kundeId = b.KundeId 
-            };
-            if (value == null) return null;
-            return value;
-        }
+
 
         public bool slettBetaling(int id)
         {
@@ -176,25 +167,11 @@ namespace HardBank
             }
         }
 
-        public List<Konto> hentKontoer(Kunde kunden)
+        public List<Kontoer> hentKontoer(Kunde kunden)
         {
-            
             var db = new KundeContext();
-
-            var query = db.Kontoer.Where(k => k.Eier.ID == kunden.id);
-
-            List<Konto> alleKontoer = query.Select(k => new Konto()
-            {
-                eier = kunden,
-                kontonavn = k.KontoNavn,
-                saldo = k.Saldo,
-                kontonr = k.Kontonr
-                
-            }).ToList();
-            
-            return alleKontoer;
-        
-            return null;
+            var query = db.Kontoer.Where(k => k.Eier.ID == kunden.id).ToList();
+            return query;
         }
 
     }

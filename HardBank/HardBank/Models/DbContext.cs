@@ -14,7 +14,6 @@ namespace HardBank.Models
         public string Fornavn { get; set; }
         public string Etternavn { get; set; }
         public string Adresse { get; set; }
-        public string Kontonr { get; set; }
         public byte[] Passord { get; set; }
         public int PersonNr { get; set; }
        

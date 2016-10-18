@@ -30,17 +30,17 @@
                         <th>Kontonummer</th>
                         <th>Saldo</th>
                     </tr>
-                    <tr>
-                        @{ foreach (Konto konti in Model.kontoer)
+                    
+                        @{ foreach (Kontoer konti in Model.kontoer)
                             {
                               <tr>
-                                <td>@konti.kontonavn</td>
-                                <td>@konti.kontonr</td>
-                                <td>@konti.saldo</td>
+                                <td>@konti.KontoNavn</td>
+                                <td>@konti.Kontonr</td>
+                                <td>@konti.Saldo</td>
                               </tr>
                             }
                         }
-                    </tr>
+                   
                 </table>
             </div>
 

@@ -12,9 +12,9 @@ namespace HardBank.ViewModels
 
         public List<Betaling> betalinger { get; set; }
 
-        public List<Konto> kontoer { get; set; }
+        public List<Kontoer> kontoer { get; set; }
 
-        public MinSideModel(Kunde kunden, List<Betaling> betalingListen, List<Konto> kontoListen)
+        public MinSideModel(Kunde kunden, List<Betaling> betalingListen, List<Kontoer> kontoListen)
         {
             kunde = kunden;
             betalinger = betalingListen;

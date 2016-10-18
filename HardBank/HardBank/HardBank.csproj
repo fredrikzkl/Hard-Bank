@@ -151,7 +151,6 @@
     </Compile>
     <Compile Include="Models\Betaling.cs" />
     <Compile Include="Models\DbContext.cs" />
-    <Compile Include="Models\Konto.cs" />
     <Compile Include="Models\Kunde.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\MinSideModel.cs" />

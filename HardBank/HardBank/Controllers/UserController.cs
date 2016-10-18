@@ -144,7 +144,7 @@ namespace HardBank.Controllers
                     var db = new DBKunde();
                     var kunde = db.hentKunde(id);
                     List<Betaling> bl = db.hentBetalinger(id);
-                    List<Konto> k1 = db.hentKontoer(kunde);
+                    List<Kontoer> k1 = db.hentKontoer(kunde);
 
                     MinSideModel model = new MinSideModel(kunde,bl,k1);
 
@@ -176,7 +176,7 @@ namespace HardBank.Controllers
         {
             try
             {
-                using(var database = new Models.KundeContext())
+                using (var database = new Models.KundeContext())
                 {
                     var nyBetaling = new Models.Betalinger();
                     nyBetaling.TilKontonr = form.tilKontonr;
@@ -184,7 +184,7 @@ namespace HardBank.Controllers
                     nyBetaling.Kid = form.kid;
                     nyBetaling.Belop = form.belop;
 
-                    if(form.dato == null)
+                    if (form.dato == null)
                     {
                         nyBetaling.Dato = DateTime.Today.ToString("MM-dd-yyyy");
                     }
@@ -197,14 +197,15 @@ namespace HardBank.Controllers
                     database.Betalinger.Add(nyBetaling);
                     database.SaveChanges();
 
-                   
-                    return RedirectToAction("MinSide", new { id = Session["Id"]});
-                }
-            }catch (Exception feil)
-            {
-                return RedirectToAction("Error", new { message = "Betaling kunne ikke gjennomføres! " + feil });            }
 
-            
+                    return RedirectToAction("MinSide", new { id = Session["Id"] });
+                }
+            }
+            catch (Exception feil)
+            {
+                return RedirectToAction("Error", new { message = "Betaling kunne ikke gjennomføres! " + feil });
+            }
+
         }
 
         public ActionResult SletteBetaling(int id)
