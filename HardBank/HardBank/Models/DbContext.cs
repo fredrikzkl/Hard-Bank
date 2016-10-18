@@ -17,7 +17,7 @@ namespace HardBank.Models
         public string Kontonr { get; set; }
         public byte[] Passord { get; set; }
         public int PersonNr { get; set; }
-        public virtual Kontoer Kontoer { get; set; }
+       
     }
 
     public class Kontoer
@@ -26,7 +26,7 @@ namespace HardBank.Models
         public int Kontonr { get; set; }
         public string KontoNavn { get; set; }
         public int Saldo { get; set; }
-        public virtual Kunde Eier { get; set; }
+        public virtual Kunder Eier { get; set; }
     }
 
     public class Betalinger
@@ -50,12 +50,13 @@ namespace HardBank.Models
         }
         public DbSet<Kunder> Kunder { get; set; }
 
-        public DbSet<Kontoer> Kontoer { get; set; }
-
         public DbSet<Betalinger> Betalinger { get; set; }
 
+        public DbSet<Kontoer> Kontoer { get; set; }
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+          
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }

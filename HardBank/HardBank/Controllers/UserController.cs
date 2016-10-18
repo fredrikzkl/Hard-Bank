@@ -42,7 +42,7 @@ namespace HardBank.Controllers
                     nyKunde.Passord = lagHash(innListe.passord);
 
                     var startKonto = new Models.Kontoer();
-                    startKonto.Eier = innListe;
+                    startKonto.Eier = nyKunde;
                     startKonto.KontoNavn = innListe.fornavn + "'s konto";
                     startKonto.Saldo = 1000;
                     
@@ -144,8 +144,9 @@ namespace HardBank.Controllers
                     var db = new DBKunde();
                     var kunde = db.hentKunde(id);
                     List<Betaling> bl = db.hentBetalinger(id);
+                    List<Konto> k1 = db.hentKontoer(kunde);
 
-                    MinSideModel model = new MinSideModel(kunde,bl);
+                    MinSideModel model = new MinSideModel(kunde,bl,k1);
 
                     return View(model);
                 }

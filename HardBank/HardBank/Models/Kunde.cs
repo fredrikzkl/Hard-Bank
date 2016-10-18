@@ -8,7 +8,7 @@ namespace HardBank.Models
 {
     public class Kunde
     {
-        public byte[] passord { get; set; }
+        public string passord { get; set; }
         public int personnr { get; set; }
         public int id { get; set; }
         public string fornavn { get; set; }

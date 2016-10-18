@@ -9,12 +9,12 @@
 
 <div class="container">
     <div class="jumbotron">
-
+    <!--
         <div class="alert alert-success fade in">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
             <strong>Success!</strong> Ny betaling registret! Betalingsnr: 3
         </div>
-
+     -->
 
     <div class="container">
 
@@ -31,11 +31,15 @@
                         <th>Saldo</th>
                     </tr>
                     <tr>
-                        
-                        <td>Spare</td>
-                        <td>1202.05.28050</td>
-                        <td>1000 000</td>
-                        
+                        @{ foreach (Konto konti in Model.kontoer)
+                            {
+                              <tr>
+                                <td>@konti.kontonavn</td>
+                                <td>@konti.kontonr</td>
+                                <td>@konti.saldo</td>
+                              </tr>
+                            }
+                        }
                     </tr>
                 </table>
             </div>

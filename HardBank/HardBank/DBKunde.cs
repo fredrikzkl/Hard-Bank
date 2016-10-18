@@ -154,7 +154,7 @@ namespace HardBank
             }
         }
 
-        public bool nyKonto(Kunde eier, int belop, string navn)
+        public bool nyKonto(Kunder eier, int belop, string navn)
         {
             var nyKonto = new Kontoer()
             {
@@ -174,6 +174,27 @@ namespace HardBank
             {
                 return false;
             }
+        }
+
+        public List<Konto> hentKontoer(Kunde kunden)
+        {
+            
+            var db = new KundeContext();
+
+            var query = db.Kontoer.Where(k => k.Eier.ID == kunden.id);
+
+            List<Konto> alleKontoer = query.Select(k => new Konto()
+            {
+                eier = kunden,
+                kontonavn = k.KontoNavn,
+                saldo = k.Saldo,
+                kontonr = k.Kontonr
+                
+            }).ToList();
+            
+            return alleKontoer;
+        
+            return null;
         }
 
     }
