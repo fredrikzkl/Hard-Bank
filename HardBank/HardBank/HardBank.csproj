@@ -110,8 +110,14 @@
     <Content Include="Content\jquery-ui.theme.css" />
     <Content Include="Content\jquery-ui.theme.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Files\billaan.jpg" />
+    <Content Include="Files\boligsparing.jpg" />
     <Content Include="Files\logo.png" />
+    <Content Include="Files\paraply.jpg" />
+    <Content Include="Files\sparing.jpg" />
+    <Content Include="Files\sparsmart.png" />
     <Content Include="Files\ui-icons_444444_256x240.png" />
+    <Content Include="Files\varforsikret.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -135,6 +141,7 @@
     <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\login.js" />
     <Content Include="Scripts\minSide.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config">

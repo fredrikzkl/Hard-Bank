@@ -56,7 +56,7 @@ namespace HardBank
         {
             var db = new KundeContext();
 
-            var kunden = db.Kunder.Where(k => k.ID == id).First();
+            var kunden = db.Kunder.Where(k => k.PersonNr == id).First();
             if (kunden == null) return null;
 
             var value = new Kunde()

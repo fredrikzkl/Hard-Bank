@@ -3,13 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
     
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 </head>
@@ -32,7 +35,6 @@
                     <li>
                     @if (ViewBag.Innlogget)
                     {
-
                         @Html.ActionLink("Min Side", "Minside", "User", new {id = ViewBag.Id }, new { @class = "a" })
                     }
                     else
@@ -43,21 +45,24 @@
 
                     </li>
                 </ul>
-                <form class="navbar-form navbar-right" role="search">
+                <form class="navbar-form navbar-right" role="search" action="/User/Login" method="post">
                     <div class="form-group">
-                          @if (ViewBag.Innlogget)
-                          {
+                        @if (ViewBag.Innlogget)
+                        {
+                            @Session["Navn"] 
                             
                             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Logg ut</button>
-                          }
-                          else
-                          {
-                               
-                            @Html.ActionLink("Logg inn", "Login", "User", null, new { @class = "btn btn-default" });
-                          }
+                        }
+                        else
+                        {
+                            <label for="personnr" class="sr-only">Personnummer</label>
+                            <input name="personnr" class="form-control lineup" placeholder="Skriv inn PersonNummer" required />
+                            <button type="submit" value="Login" name="login" class="btn btn-default">Logg inn</button>
+                        }
 
                     </div>
                 </form>
+
             </div>
         </div>
     </div>

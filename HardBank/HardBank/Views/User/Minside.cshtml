@@ -16,12 +16,15 @@
         </div>
      -->
 
-    <div class="container">
+    <div id="mypageheader">
 
-        <h2>@Model.kunde.fornavn @Model.kunde.etternavn</h2>
-        <h5>Kundenummer: @Model.kunde.id</h5>
-        <h5>Personnummer: @Model.kunde.personnr</h5>
+        <div class="col-md-6">
 
+            <h2>@Model.kunde.fornavn @Model.kunde.etternavn</h2>
+            <h5>Kundenummer: @Model.kunde.id</h5>
+            <h5>Personnummer: @Model.kunde.personnr</h5>
+        </div>
+        <div class="col-md-6">
             <div class="table">
                 <h2>Mine konti</h2>
                 <table class="table table-bordered">
@@ -30,21 +33,21 @@
                         <th>Kontonummer</th>
                         <th>Saldo</th>
                     </tr>
-                    
-                        @{ foreach (Kontoer konti in Model.kontoer)
-                            {
-                              <tr>
+
+                    @{ foreach (Kontoer konti in Model.kontoer)
+                        {
+                            <tr>
                                 <td>@konti.KontoNavn</td>
                                 <td>@konti.Kontonr</td>
                                 <td>@konti.Saldo</td>
-                              </tr>
-                            }
+                            </tr>
                         }
-                   
+                    }
                 </table>
             </div>
+            </div>
+        </div>
 
-    </div>
 
 
 
@@ -57,9 +60,11 @@
                     <li>
                         <a data-toggle="tab" href="#b">Registrerte betalinger</a>
                     </li>
+                    <!--
                     <li>
                         <a data-toggle="tab" href="#c">Utførte betalinger</a>
                     </li>
+                        -->
 
                 </ul>
 

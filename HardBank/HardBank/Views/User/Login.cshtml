@@ -5,22 +5,31 @@
 }
 
 <div class="container centered">
-    <form action="/User/Login" class="form-signin" method="post">
-        <h2 class="form-signin-header">Logg inn</h2>
-
-        <label for="personnr" class="sr-only">Personnummer</label>
-        <input name="personnr" class="form-control lineup" placeholder="PersonNummer" required />
 
 
-        <label for="inputPassword" class="sr-only">Passord</label>
-        <input name="passord" type="password" id="inputPassword" class="form-control lineup" placeholder="Password" required />
+    <form action="/User/LoginAuth" class="form-inline" method="post">
+        <div class="form-group">
+            <div id="authBox">
+                <label for="authkode" class="sr-only">Authentication</label>
+                <input id="authkode" name="authkode" class="form-control lineup" placeholder="Kode fra kodebrikke" required />
+            </div>
 
 
-        <br />
-        <button type="submit" value="New Member" name="nyKunde" class="btn btn-lg btn-primary btn-block">Kjør</button>
+            <div id="passBox" class="hidden">
+                <label for="inputPassword" class="sr-only">Passord</label>
+                <input name="passord" type="password" id="inputPassword" class="form-control lineup" placeholder="Passord" required />
+            </div>
+        </div>
+
+        <div id="knapp" class="btn btn-lg btn-primary">
+            <i class="fa fa-icon-resize-small fa-arrow-right" aria-hidden="true"></i>
+        </div>
+
     </form>
+
 </div>
 
+<script type="text/javascript" src="~/Scripts/login.js"></script>
 
 
 

@@ -13,7 +13,13 @@
         <br/>
         <label for="selkontnr">Betale fra</label>
         <select name="fraKontonr" class="form-control" id="selkontnr">
-            <option  value="1202.05.28050">1202.05.28050</option>
+            @using HardBank.Models;
+            @model HardBank.ViewModels.MinSideModel
+            @{foreach (Kontoer konti in Model.kontoer)
+                {
+                        <option value="@konti.Kontonr">@konti.KontoNavn</option>
+                }
+            }
         </select>
         
         <label>Betale til konto</label>
@@ -45,7 +51,7 @@
                     <div class="modal-footer">
                         <input type="submit" value="Ja"
                                class="submit btn btn-success special-submit" />  
-                        <button type="submit" class="btn btn-danger" data-dismiss="modal">Nei</button>
+                        <button class="btn btn-danger" data-dismiss="modal">Nei</button>
                     </div>
                 </div>
 

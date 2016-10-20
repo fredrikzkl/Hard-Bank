@@ -11,6 +11,7 @@ namespace HardBank.Controllers
 {
     public class UserController : Controller
     {
+       
         // GET: User
         public ActionResult Index()
         {
@@ -71,16 +72,15 @@ namespace HardBank.Controllers
 
             using (var db = new KundeContext())
             {
-                byte[] passordDb = lagHash(innKunde.passord);
                 Kunder funnetBruker = db.Kunder.FirstOrDefault
-                (b => b.Passord == passordDb && b.PersonNr == innKunde.personnr);
+                (b => b.PersonNr == innKunde.personnr);
                 if (funnetBruker == null)
                 {
                     return false;
                 }
                 else
                 {
-                       return true;
+                    return true;
                 }
             }
         }
@@ -91,26 +91,70 @@ namespace HardBank.Controllers
         {
             checkSession();
 
+            Session["tempId"] = loginForm.personnr;
+            
             if (Bruker_i_DB(loginForm))
             {
-                Session["LoggetInn"] = true;
-                ViewBag.Innlogget = true;
-
-                var db = new DBKunde();
-                int kundeId = (int)db.hentKundeMedPersonnr(loginForm.personnr).id;
-                ViewBag.Id = kundeId;
-                Session["Id"] = kundeId;
-                return RedirectToAction("MinSide", new {id = kundeId});
+                return View();
             }
             else
             {
-                Response.Write("<div style='padding-top:1em;' class='container centered'><div class='alert alert-danger'>Brukernavn eller passord er feil!</div></div>");
+                Response.Write("<div style='padding-top:1em;' class='container centered'><div class='alert alert-danger'>Bruker-ID feil!</div></div>");
                 Session["LoggetInn"] = false;
                 ViewBag.Innlogget = false;
-                return View();
+                return RedirectToAction("Error", new { message = "Bruker med id " + loginForm.personnr + " finnes ikke" });
             }
 
-            
+
+        }
+
+        
+        
+        
+        [HttpPost]
+        public ActionResult LoginAuth(Kunde loginForm)
+        {
+            checkSession();
+
+            if (Auth_i_DB(loginForm))
+            {
+                Session["LoggetInn"] = true;
+                ViewBag.Innlogget = true;
+                var db = new DBKunde();
+                int kundeId = (int)Session["tempId"];
+                ViewBag.Id = kundeId;
+                Session["Id"] = kundeId;
+                Kunde kunden = db.hentKunde(kundeId);
+                Session["Navn"] = kunden.fornavn + " " +kunden.etternavn;
+                return RedirectToAction("MinSide", new { id = kundeId });
+            }
+            else
+            {
+                Response.Write("<div style='padding-top:1em;' class='container centered'><div class='alert alert-danger'>Kode fra kodebrikke eller passord er feil!</div></div>");
+                Session["LoggetInn"] = false;
+                ViewBag.Innlogget = false;
+                return RedirectToAction("Error", new { message = "Feil passord" });
+            }
+
+        }
+
+        private static bool Auth_i_DB(Kunde innKunde)
+        {
+            using (var db = new KundeContext())
+            {
+                byte[] passordDb = lagHash(innKunde.passord);
+               
+                Kunder funnetBruker = db.Kunder.FirstOrDefault
+                (b => b.Passord == passordDb);
+                if (funnetBruker == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
         }
 
 
@@ -124,6 +168,9 @@ namespace HardBank.Controllers
         {
             Session["LoggetInn"] = false;
             ViewBag.Innlogget = false;
+            Session["Id"] = null;
+            Session["tempId"] = null;
+            Session["Navn"] = null;
             checkSession();
 
 
@@ -167,6 +214,7 @@ namespace HardBank.Controllers
             {
                 ViewBag.Id = Session["Id"];
                 ViewBag.Innlogget = (bool)Session["LoggetInn"];
+                
             }
         }
 

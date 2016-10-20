@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HardBank.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -27,6 +28,12 @@ namespace HardBank.Controllers
 
             return View();
         }
-        
+
+        [HttpPost]
+        public ActionResult RedirectLogin(Kunde kunde)
+        {
+            return RedirectToAction("Login", "", new { id = kunde.id });
+        }
+
     }
 }
