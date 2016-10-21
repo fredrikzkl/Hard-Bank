@@ -25,7 +25,7 @@ namespace HardBank.Models
         public int Kontonr { get; set; }
         public string KontoNavn { get; set; }
         public int Saldo { get; set; }
-        public virtual Kunder Eier { get; set; }
+        public int KundeId { get; set; }
     }
 
     public class Betalinger

@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+
     $("#betalbtn").click(function () {
         var belop = document.getElementById("belop").value;
         var account = document.getElementById("tilKonto").value;
@@ -36,7 +37,26 @@
         $("form#endre-ordre-form").attr('action', '/User/EndreBetaling?id=' + ordreId + '');
         $("a#slettBtn").attr('href', '/User/SletteBetaling?id=' + ordreId + '');
     });
-
+    
    
 });
+
+
+
+$(function () {
+    var personNr = $("#personNrLabel").data('value');
+    $.getJSON("/Transactions/HentAlleKontoerTilKunde", { id: personNr }, function (response) {
+        var output = "";
+        for (var i in response) {
+            
+            output += "<tr><td>" + response[i].KontoNavn + "</td>" +
+                          "<td>" + response[i].Kontonr + "</td>" + 
+                          "<td>" + response[i].Saldo + "</td></tr>";
+        }
+        $("#kontoList").html(output);
+    });
+})
+
+
+
 

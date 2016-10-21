@@ -22,33 +22,30 @@
 
             <h2>@Model.kunde.fornavn @Model.kunde.etternavn</h2>
             <h5>Kundenummer: @Model.kunde.id</h5>
-            <h5>Personnummer: @Model.kunde.personnr</h5>
+            <h5 id="personNrLabel" data-value=@Model.kunde.personnr>Personnummer: @Model.kunde.personnr</h5>
+
         </div>
+
+
+
         <div class="col-md-6">
             <div class="table">
                 <h2>Mine konti</h2>
                 <table class="table table-bordered">
-                    <tr>
-                        <th>Kontonavn</th>
-                        <th>Kontonummer</th>
-                        <th>Saldo</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Kontonavn</th>
+                            <th>Kontonummer</th>
+                            <th>Saldo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kontoList">
 
-                    @{ foreach (Kontoer konti in Model.kontoer)
-                        {
-                            <tr>
-                                <td>@konti.KontoNavn</td>
-                                <td>@konti.Kontonr</td>
-                                <td>@konti.Saldo</td>
-                            </tr>
-                        }
-                    }
+                    </tbody>
                 </table>
             </div>
             </div>
         </div>
-
-
 
 
         <div class="container" id="minsideTab">

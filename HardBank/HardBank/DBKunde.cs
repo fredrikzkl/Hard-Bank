@@ -151,7 +151,7 @@ namespace HardBank
             {
                 KontoNavn = navn,
                 Saldo = belop,
-                Eier = eier,
+                KundeId= eier.PersonNr,
             };
 
             var db = new KundeContext();
@@ -170,7 +170,7 @@ namespace HardBank
         public List<Kontoer> hentKontoer(Kunde kunden)
         {
             var db = new KundeContext();
-            var query = db.Kontoer.Where(k => k.Eier.ID == kunden.id).ToList();
+            var query = db.Kontoer.Where(k => k.KundeId == kunden.personnr).ToList();
             return query;
         }
 

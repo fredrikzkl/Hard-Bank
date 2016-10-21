@@ -43,7 +43,7 @@ namespace HardBank.Controllers
                     nyKunde.Passord = lagHash(innListe.passord);
 
                     var startKonto = new Models.Kontoer();
-                    startKonto.Eier = nyKunde;
+                    startKonto.KundeId = innListe.personnr;
                     startKonto.KontoNavn = innListe.fornavn + "'s konto";
                     startKonto.Saldo = 1000;
                     
