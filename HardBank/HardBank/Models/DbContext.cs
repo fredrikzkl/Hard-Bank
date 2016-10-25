@@ -15,7 +15,7 @@ namespace HardBank.Models
         public string Etternavn { get; set; }
         public string Adresse { get; set; }
         public byte[] Passord { get; set; }
-        public int PersonNr { get; set; }
+        public string PersonNr { get; set; }
        
     }
 
@@ -25,7 +25,7 @@ namespace HardBank.Models
         public int Kontonr { get; set; }
         public string KontoNavn { get; set; }
         public int Saldo { get; set; }
-        public int KundeId { get; set; }
+        public string KundeId { get; set; }
     }
 
     public class Betalinger
@@ -37,7 +37,7 @@ namespace HardBank.Models
         public string Dato { get; set; }
         public string Kid { get; set; }
         public string Belop { get; set; }
-        public int KundeId { get; set; }
+        public string KundeId { get; set; }
     }
 
     public class KundeContext : DbContext

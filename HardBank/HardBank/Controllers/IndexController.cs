@@ -12,6 +12,31 @@ namespace HardBank.Controllers
         // GET: Index
         public ActionResult Index()
         {
+            checkSession();
+            return View();
+        }
+
+        public ActionResult OmOss()
+        {
+            checkSession();
+
+            var nyAntall = new DBKunde();
+            int tell = nyAntall.antallKunder();
+
+            ViewBag.OmOss = tell;
+
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult RedirectLogin(Kunde kunde)
+        {
+            return RedirectToAction("Login", "", new { id = kunde.id });
+        }
+
+        public void checkSession()
+        {
             if (Session["LoggetInn"] == null)
             {
                 Session["Id"] = null;
@@ -26,13 +51,6 @@ namespace HardBank.Controllers
                 ViewBag.Innlogget = (bool)Session["LoggetInn"];
             }
 
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult RedirectLogin(Kunde kunde)
-        {
-            return RedirectToAction("Login", "", new { id = kunde.id });
         }
 
     }

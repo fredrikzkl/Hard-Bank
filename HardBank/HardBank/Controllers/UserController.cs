@@ -30,8 +30,15 @@ namespace HardBank.Controllers
         public ActionResult NewMember(Kunde innListe)
         {
             checkSession();
+            
+
+            if (ModelState.IsValid) { 
             try
             {
+               if (Bruker_i_DB(innListe))
+               {
+                return RedirectToAction("Error", new { message = "En kunde med dette personnummeret er allerede registrert" });
+               }
                 using (var database = new Models.KundeContext())
                 {
                     var nyKunde = new Models.Kunder();
@@ -57,7 +64,9 @@ namespace HardBank.Controllers
             catch(Exception)
             {
                 return RedirectToAction("Error", new { message = "Kunne ikke legge til bruker, en feil oppsto!" });            }
-           
+            }
+            return View();
+
         }
 
         private static byte[] lagHash(string innPassord)
@@ -121,7 +130,7 @@ namespace HardBank.Controllers
                 Session["LoggetInn"] = true;
                 ViewBag.Innlogget = true;
                 var db = new DBKunde();
-                int kundeId = (int)Session["tempId"];
+                string kundeId = (string)Session["tempId"];
                 ViewBag.Id = kundeId;
                 Session["Id"] = kundeId;
                 Kunde kunden = db.hentKunde(kundeId);
@@ -178,13 +187,13 @@ namespace HardBank.Controllers
         }
 
 
-        public ActionResult Minside(int id)
+        public ActionResult Minside(string id)
         {
             checkSession();
             if (Session["LoggetInn"] != null && id == ViewBag.Id)
             {
                 bool loggetInn = (bool)Session["LoggetInn"];
-                int SessionKundeId = (int) Session["Id"];
+                string SessionKundeId = (string) Session["Id"];
 
                 if (loggetInn)
                 {
@@ -240,7 +249,7 @@ namespace HardBank.Controllers
                     {
                         nyBetaling.Dato = form.dato;
                     }
-                    nyBetaling.KundeId = (int)Session["Id"];
+                    nyBetaling.KundeId = (string)Session["Id"];
 
                     database.Betalinger.Add(nyBetaling);
                     database.SaveChanges();

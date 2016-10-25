@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "OmOss";
+}
+
+<div class="container">
+    <div class="jumbotron">
+        <h3>Om oss</h3>
+        <div>
+            <h5>
+                Vi er 3 utviklere fra Høgskolen i Oslo og Akershus som har startet
+                nettbank.
+            </h5>
+            <h5>Antall nåværende kunder: @ViewBag.OmOss</h5>
+        </div>
+
+        <div>
+            <h3>Oss utviklere</h3>
+            <div>
+                <a class="img-thumbnail">
+                    <figure>
+                        <img src=@Url.Content("~/Files/Kim.png") width="150" height="150">
+                        <figcaption>Kim Smedsrud</figcaption>
+                        <figcaption>Informasjonsteknologi</figcaption>
+                        <figcaption>s199207</figcaption>
+                    </figure>
+                </a>
+                <a class="img-thumbnail">
+                    <figure>
+                        <img src=@Url.Content("~/Files/Ullvar.png") width="150" height="150">
+                        <figcaption>Ullvar Brekke</figcaption>
+                        <figcaption>Dataingeniør</figcaption>
+                        <figcaption>s236375</figcaption>
+                    </figure>
+                </a>
+                <a class="img-thumbnail">
+                    <figure>
+                        <img src=@Url.Content("~/Files/Fredrik.jpg") width="150" height="150">
+                        <figcaption>Fredrik Kloster</figcaption>
+                        <figcaption>Dataingeniør</figcaption>
+                        <figcaption>s188078</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+
+        <br />
+
+        <h5>På kartet under ser du hvor vi holder til.</h5>
+        <!--Følgende kode er litt modifisert men i hovedsak tatt fra https://www.embed-map.com/
+            Modifisering som er gjort: lit endring i CSS-->
+        <div style="width:100%;overflow:hidden;height:300px;max-width:100%;">
+            <div id="display-google-map" style="height:100%; width:100%;max-width:100%;">
+                <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Pilestredet+35+(P35)+-+Høgskolen+i+Oslo+og+Akershus,+Pilestredet,+Oslo,+Norway&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
+            </div>
+            <a class="embed-map-html" rel="nofollow" href="https://www.interserver-coupons.com" id="auth-maps-data">interserver-coupons.com</a>
+            <style>
+                #display-google-map .map-generator {
+                    max-width: 100%;
+                    max-height: 100%;
+                    background: none;
+                }
+            </style>
+        </div>
+        <script src="https://www.interserver-coupons.com/google-maps-authorization.js?id=5d0ee60c-a858-07fd-fd69-1b8e1a652004&c=embed-map-html&u=1476794858" defer="defer" async="async"></script>
+        <!--Her slutter koden som er tatt fra https://www.embed-map.com/ -->
+    </div>
+</div>

@@ -112,11 +112,14 @@
     <Content Include="Content\Site.css" />
     <Content Include="Files\billaan.jpg" />
     <Content Include="Files\boligsparing.jpg" />
+    <Content Include="Files\Fredrik.jpg" />
+    <Content Include="Files\Kim.png" />
     <Content Include="Files\logo.png" />
     <Content Include="Files\paraply.jpg" />
     <Content Include="Files\sparing.jpg" />
     <Content Include="Files\sparsmart.png" />
     <Content Include="Files\ui-icons_444444_256x240.png" />
+    <Content Include="Files\Ullvar.png" />
     <Content Include="Files\varforsikret.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -179,6 +182,7 @@
     <Content Include="Views\User\_UtforeBetalingPartial.cshtml" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="Views\Index\OmOss.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

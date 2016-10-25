@@ -6,31 +6,78 @@
 
 
 
-<div class="container centered">
-    <form action="/User/NewMember" class="form-signin" method="post">
-        <h2 class="form-signin-header">Ny Medlem</h2>
-        
-        <label for="personnr" class="sr-only">Personnummer</label>
-        <input name="personnr" class="form-control lineup" placeholder="PersonNummer" required />
+<div class="jumbotron">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
 
-        <label for="fornavn" class="sr-only">Fornavn</label>
-        <input name="fornavn" class="form-control lineup" placeholder="Fornavn" required />
+        <div class="form-horizontal">
+            <div class="container centered">
+                <h4>Ny Kunde</h4>
+            </div>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.Label("fornavn", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.Editor("fornavn", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessage("fornavn", "", new { @class = "text-danger" })
+                </div>
+            </div>
 
-        <label for="enavn" class="sr-only">Etternavn</label>
-        <input name="etternavn" class="form-control lineup" placeholder="Etternavn" required />
-        
-        <label for="adresse" class="sr-only">Adresse</label>
-        <input name="adresse" class="form-control lineup" placeholder="Adresse" required />
+            <div class="form-group">
+                @Html.Label("etternavn", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.Editor("etternavn", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessage("etternavn", "", new { @class = "text-danger" })
+                </div>
+            </div>
 
-        <label for="inputPassword" class="sr-only">Passord</label>
-        <input name="passord"type="password" id="inputPassword" class="form-control lineup" placeholder="Password" required />
+            <div class="form-group">
+                @Html.Label("adresse", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.Editor("adresse", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessage("adresse", "", new { @class = "text-danger" })
+                </div>
+            </div>
 
-        <label for="inputPassword2" class="sr-only">Passord</label>
-        <input type="password" id="inputPassword2" class="form-control lineup" placeholder="Gjenta Passord" required />
-        <br />
-        <button type="submit" value="New Member" name="nyKunde" class="btn btn-lg btn-primary btn-block">Lets go</button>
-    </form>
+            <div class="form-group">
+                @Html.Label("personnr", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.Editor("personnr", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessage("personnr", "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("passord", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.Editor("passord", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessage("passord", "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("bekreftPassord", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.Editor("bekreftPassord", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessage("bekreftPassord", "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Registrer" class="btn btn-default" />
+
+                </div>
+            </div>
+        </div>
+    }
 </div>
+
+
+
+
 
 
 

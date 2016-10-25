@@ -8,6 +8,14 @@ namespace HardBank
 {
     public class DBKunde
     {
+
+        public int antallKunder()
+        {
+            var db = new KundeContext();
+            int count = (from k in db.Kunder select k.ID).Count();
+            return count;
+        }
+
         public bool settInn(Kunde innKunde)
         {
             var nyKunde = new Kunder()
@@ -52,7 +60,7 @@ namespace HardBank
             
         }
 
-        public Kunde hentKunde(int id)
+        public Kunde hentKunde(string id)
         {
             var db = new KundeContext();
 
@@ -76,7 +84,7 @@ namespace HardBank
             return query;
         }
 
-        public Kunde hentKundeMedPersonnr(int personNr)
+        public Kunde hentKundeMedPersonnr(string personNr)
         {
             var db = new KundeContext();
             var kunden = db.Kunder.Where(k => k.PersonNr == personNr).First();
@@ -91,7 +99,7 @@ namespace HardBank
             return value;
         }
 
-        public List<Betaling> hentBetalinger(int id)
+        public List<Betaling> hentBetalinger(string id)
         {
             var db = new KundeContext();
             var query = db.Betalinger.Where(b => b.KundeId == id);

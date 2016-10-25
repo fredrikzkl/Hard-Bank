@@ -12,7 +12,7 @@ namespace HardBank.Controllers
     {
         
 
-        public JsonResult HentAlleKontoerTilKunde(int id)
+        public JsonResult HentAlleKontoerTilKunde(string id)
         {
             using (var db = new KundeContext())
             {
