@@ -50,9 +50,55 @@ X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\Sys
 X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\obj\Debug\HardAdmin.csprojResolveAssemblyReference.cache
 X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\obj\Debug\HardAdmin.dll
 X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\obj\Debug\HardAdmin.pdb
-X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\BLL.dll
-X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\DAL.dll
-X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\Model.dll
-X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\BLL.pdb
-X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\DAL.pdb
-X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\Model.pdb
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\ApplicationInsights.config
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\roslyn\csc.exe
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\roslyn\vbc.exe
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\roslyn\VBCSCompiler.exe
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\HardAdmin.dll.config
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\HardAdmin.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\HardAdmin.pdb
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\EntityFramework.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\EntityFramework.SqlServer.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.AI.Web.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Newtonsoft.Json.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\System.Web.Helpers.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\System.Web.Mvc.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\System.Web.Razor.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\System.Web.Webpages.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\System.Web.Webpages.Razor.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\EntityFramework.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\EntityFramework.SqlServer.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.AI.Web.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\Newtonsoft.Json.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\System.Web.Razor.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\System.Web.Webpages.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\System.Web.Webpages.Razor.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\System.Web.Helpers.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\bin\System.Web.Mvc.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\obj\Debug\HardAdmin.csprojResolveAssemblyReference.cache
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\obj\Debug\HardAdmin.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\HardAdmin\obj\Debug\HardAdmin.pdb
