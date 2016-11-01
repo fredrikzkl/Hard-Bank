@@ -1,0 +1,5 @@
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\Model\bin\Debug\Model.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\Model\bin\Debug\Model.pdb
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\Model\obj\Debug\Model.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\Model\obj\Debug\Model.pdb

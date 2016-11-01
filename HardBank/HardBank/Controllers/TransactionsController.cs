@@ -1,4 +1,5 @@
-﻿using HardBank.Models;
+﻿using DAL;
+using HardBank.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,7 +15,7 @@ namespace HardBank.Controllers
 
         public JsonResult HentAlleKontoerTilKunde(string id)
         {
-            using (var db = new KundeContext())
+            using (var db = new BankContext())
             {
 
                 List<Kontoer> transactions = db.Kontoer.Where(k => k.KundeId == id).ToList();

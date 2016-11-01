@@ -1,0 +1,14 @@
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\bin\Debug\BLL.dll.config
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\bin\Debug\BLL.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\bin\Debug\BLL.pdb
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\bin\Debug\DAL.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\bin\Debug\Model.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\bin\Debug\DAL.pdb
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\bin\Debug\Model.pdb
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\bin\Debug\EntityFramework.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\obj\Debug\BLL.dll
+C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\obj\Debug\BLL.pdb

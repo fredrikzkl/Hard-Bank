@@ -13,7 +13,7 @@
         <br/>
         <label for="selkontnr">Betale fra</label>
         <select name="fraKontonr" class="form-control" id="selkontnr">
-            @using HardBank.Models;
+            @using DAL;
             @model HardBank.ViewModels.MinSideModel
             @{foreach (Kontoer konti in Model.kontoer)
                 {

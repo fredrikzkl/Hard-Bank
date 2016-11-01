@@ -1,4 +1,5 @@
-﻿using HardBank.Models;
+﻿using DAL;
+using HardBank.Models;
 using HardBank.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -39,9 +40,9 @@ namespace HardBank.Controllers
                {
                 return RedirectToAction("Error", new { message = "En kunde med dette personnummeret er allerede registrert" });
                }
-                using (var database = new Models.KundeContext())
+                using (var database = new DAL.BankContext())
                 {
-                    var nyKunde = new Models.Kunder();
+                    var nyKunde = new Kunder();
                     nyKunde.Fornavn = innListe.fornavn;
                     nyKunde.Etternavn = innListe.etternavn;
                     nyKunde.PersonNr = innListe.personnr;
@@ -49,7 +50,7 @@ namespace HardBank.Controllers
 
                     nyKunde.Passord = lagHash(innListe.passord);
 
-                    var startKonto = new Models.Kontoer();
+                    var startKonto = new Kontoer();
                     startKonto.KundeId = innListe.personnr;
                     startKonto.KontoNavn = innListe.fornavn + "'s konto";
                     startKonto.Saldo = 1000;
@@ -79,7 +80,7 @@ namespace HardBank.Controllers
         }        private static bool Bruker_i_DB(Kunde innKunde)
         {
 
-            using (var db = new KundeContext())
+            using (var db = new BankContext())
             {
                 Kunder funnetBruker = db.Kunder.FirstOrDefault
                 (b => b.PersonNr == innKunde.personnr);
@@ -149,7 +150,7 @@ namespace HardBank.Controllers
 
         private static bool Auth_i_DB(Kunde innKunde)
         {
-            using (var db = new KundeContext())
+            using (var db = new BankContext())
             {
                 byte[] passordDb = lagHash(innKunde.passord);
                
@@ -233,9 +234,9 @@ namespace HardBank.Controllers
         {
             try
             {
-                using (var database = new Models.KundeContext())
+                using (var database = new BankContext())
                 {
-                    var nyBetaling = new Models.Betalinger();
+                    var nyBetaling = new Betalinger();
                     nyBetaling.TilKontonr = form.tilKontonr;
                     nyBetaling.FraKontonr = form.fraKontonr;
                     nyBetaling.Kid = form.kid;
