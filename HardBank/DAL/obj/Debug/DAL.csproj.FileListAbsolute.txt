@@ -10,3 +10,15 @@ C:\Users\Fredrik\Documents\Hard-Bank\HardBank\DAL\bin\Debug\EntityFramework.SqlS
 C:\Users\Fredrik\Documents\Hard-Bank\HardBank\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Fredrik\Documents\Hard-Bank\HardBank\DAL\obj\Debug\DAL.dll
 C:\Users\Fredrik\Documents\Hard-Bank\HardBank\DAL\obj\Debug\DAL.pdb
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\DAL\bin\Debug\DAL.dll.config
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\DAL\bin\Debug\DAL.dll
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\DAL\bin\Debug\DAL.pdb
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\DAL\bin\Debug\Model.dll
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\DAL\bin\Debug\Model.pdb
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\DAL\obj\Debug\DAL.dll
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\DAL\obj\Debug\DAL.pdb

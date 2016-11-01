@@ -3,66 +3,111 @@
     ViewBag.Title = "OmOss";
 }
 
-<div class="container">
-    <div class="jumbotron">
-        <h3>Om oss</h3>
-        <div>
-            <h5>
-                Vi er 3 utviklere fra Høgskolen i Oslo og Akershus som har startet
-                nettbank.
-            </h5>
-            <h5>Antall nåværende kunder: @ViewBag.OmOss</h5>
-        </div>
+<head>
+    <link href="~/Content/round-about.css" rel="stylesheet">
+</head>
 
-        <div>
-            <h3>Oss utviklere</h3>
-            <div>
-                <a class="img-thumbnail">
-                    <figure>
-                        <img src=@Url.Content("~/Files/Kim.png") width="150" height="150">
-                        <figcaption>Kim Smedsrud</figcaption>
-                        <figcaption>Informasjonsteknologi</figcaption>
-                        <figcaption>s199207</figcaption>
-                    </figure>
-                </a>
-                <a class="img-thumbnail">
-                    <figure>
-                        <img src=@Url.Content("~/Files/Ullvar.png") width="150" height="150">
-                        <figcaption>Ullvar Brekke</figcaption>
-                        <figcaption>Dataingeniør</figcaption>
-                        <figcaption>s236375</figcaption>
-                    </figure>
-                </a>
-                <a class="img-thumbnail">
-                    <figure>
-                        <img src=@Url.Content("~/Files/Fredrik.jpg") width="150" height="150">
-                        <figcaption>Fredrik Kloster</figcaption>
-                        <figcaption>Dataingeniør</figcaption>
-                        <figcaption>s188078</figcaption>
-                    </figure>
-                </a>
-            </div>
-        </div>
+    <div class="container">
 
-        <br />
-
-        <h5>På kartet under ser du hvor vi holder til.</h5>
-        <!--Følgende kode er litt modifisert men i hovedsak tatt fra https://www.embed-map.com/
-            Modifisering som er gjort: lit endring i CSS-->
-        <div style="width:100%;overflow:hidden;height:300px;max-width:100%;">
-            <div id="display-google-map" style="height:100%; width:100%;max-width:100%;">
-                <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Pilestredet+35+(P35)+-+Høgskolen+i+Oslo+og+Akershus,+Pilestredet,+Oslo,+Norway&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
-            </div>
-            <a class="embed-map-html" rel="nofollow" href="https://www.interserver-coupons.com" id="auth-maps-data">interserver-coupons.com</a>
-            <style>
-                #display-google-map .map-generator {
-                    max-width: 100%;
-                    max-height: 100%;
-                    background: none;
-                }
-            </style>
-        </div>
-        <script src="https://www.interserver-coupons.com/google-maps-authorization.js?id=5d0ee60c-a858-07fd-fd69-1b8e1a652004&c=embed-map-html&u=1476794858" defer="defer" async="async"></script>
-        <!--Her slutter koden som er tatt fra https://www.embed-map.com/ -->
-    </div>
+        <!-- Om oss -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Om oss
+                </h1>
+                <p>
+                    Hardbank er en skoleoppgave gitt i faget WebApplikasjoner som en del av en mappevurdering. </br>
+                    Oppgaven har gitt oss mulgiheten til å lære:</br>
+                    <ul style="list-style-type:circle">
+                        <li>Lagdeling av applikasjoner og viktigheten av en god applikasjonsarkitektur</li>
+                        <li>Ulike designmønstre</li>
+                        <li>Tjenerhåndterte autentifiseringer med økter/sesjoner</li>
+                        <li>Hvodan web-tjenester kan utvikles i webapplikasjoner for økt funksjonalitet på nettsider.</li>
+                    </ul>
 </div>
+        </div>
+
+        <!-- Gruppemedlemer -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Utviklerne av nettbanken</h2>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" style="height:200px;" src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/13239482_10156922838440704_3506441259100325198_n.jpg?oh=065738c3fe024373edf2e515c703cc7c&oe=58998E99" alt="">
+                <h3>
+                    André Hovda
+                    <small>Informasjonsteknologi</small>
+                </h3>
+                
+            </div>
+
+
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" style="height:200px;" src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/12249992_10153319035222057_6022642219084979244_n.jpg?oh=922c2b3aba37a73147ddcfeb296e6233&oe=588E9950" alt="">
+                <h3>
+                    Julian Refsland
+                    <small>Informasjonsteknologi</small>
+                </h3>
+                
+            </div>
+
+
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" style="height:200px;" src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/12249666_10153650671855726_8449894984817900137_n.jpg?oh=82dc2348d09e3637994343349acc9850&oe=58AC736B" alt="">
+                <h3>
+                    Magnus Bärnholt
+                    <small>Dataingeniør</small>
+                </h3>
+                
+            </div>
+
+
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" style="height:200px;" src="https://avatars1.githubusercontent.com/u/6582689?v=3&s=400" alt="">
+                <h3>
+                    Fredrik Kloster
+                    <small>Dataingeniør</small>
+                </h3>
+               
+            </div>
+
+
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" style="height:200px;" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAATIAAAAJGNmZTNkNDJhLTk1MzktNGY1OS04ZmYzLWEzYmFmZThhNDliYQ.jpg" alt="">
+                <h3>
+                    Ullvar Brekke
+                    <small>Dataingeniør</small>
+                </h3>
+                
+            </div>
+
+
+            
+
+
+        </div>
+        <hr>
+
+
+        <div class="container">
+            <h5>På kartet under ser du hvor vi holder til.</h5>
+            <!--Følgende kode er litt modifisert men i hovedsak tatt fra https://www.embed-map.com/
+            Modifisering som er gjort: lit endring i CSS-->
+            <div style="width:100%;overflow:hidden;height:300px;max-width:100%;">
+                <div id="display-google-map" style="height:100%; width:100%;max-width:100%;">
+                    <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Pilestredet+35+(P35)+-+Høgskolen+i+Oslo+og+Akershus,+Pilestredet,+Oslo,+Norway&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
+                </div>
+                <a class="embed-map-html" rel="nofollow" href="https://www.interserver-coupons.com" id="auth-maps-data">interserver-coupons.com</a>
+                <style>
+                    #display-google-map .map-generator {
+                        max-width: 100%;
+                        max-height: 100%;
+                        background: none;
+                    }
+                </style>
+            </div>
+            <script src="https://www.interserver-coupons.com/google-maps-authorization.js?id=5d0ee60c-a858-07fd-fd69-1b8e1a652004&c=embed-map-html&u=1476794858" defer="defer" async="async"></script>
+            <!--Her slutter koden som er tatt fra https://www.embed-map.com/ -->
+        </div>
+    </div>

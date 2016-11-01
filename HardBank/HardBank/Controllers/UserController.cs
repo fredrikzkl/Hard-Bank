@@ -64,7 +64,8 @@ namespace HardBank.Controllers
             }
             catch(Exception)
             {
-                return RedirectToAction("Error", new { message = "Kunne ikke legge til bruker, en feil oppsto!" });            }
+                return RedirectToAction("Error", new { message = "Kunne ikke legge til bruker, en feil oppsto!" });
+            }
             }
             return View();
 
@@ -77,7 +78,9 @@ namespace HardBank.Controllers
             innData = System.Text.Encoding.ASCII.GetBytes(innPassord);
             utData = algoritme.ComputeHash(innData);
             return utData;
-        }        private static bool Bruker_i_DB(Kunde innKunde)
+        }
+
+        private static bool Bruker_i_DB(Kunde innKunde)
         {
 
             using (var db = new BankContext())
@@ -93,7 +96,8 @@ namespace HardBank.Controllers
                     return true;
                 }
             }
-        }
+        }
+
 
 
         [HttpPost]
@@ -208,7 +212,8 @@ namespace HardBank.Controllers
                     return View(model);
                 }
             }
-            return RedirectToAction("Error", new {message = "Du må logge inn for å ha tilgang til denne siden"});
+            return RedirectToAction("Error", new {message = "Du må logge inn for å ha tilgang til denne siden"});
+
         }
 
         public void checkSession()

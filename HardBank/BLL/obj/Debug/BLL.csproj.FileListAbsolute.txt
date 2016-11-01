@@ -12,3 +12,17 @@ C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\bin\Debug\EntityFramework.SqlS
 C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\obj\Debug\BLL.dll
 C:\Users\Fredrik\Documents\Hard-Bank\HardBank\BLL\obj\Debug\BLL.pdb
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\bin\Debug\BLL.dll.config
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\bin\Debug\BLL.dll
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\bin\Debug\BLL.pdb
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\bin\Debug\DAL.dll
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\bin\Debug\Model.dll
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\bin\Debug\DAL.pdb
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\bin\Debug\Model.pdb
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\bin\Debug\EntityFramework.xml
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\obj\Debug\BLL.dll
+C:\Users\Ullvar\Documents\Skole HIOA\3 høst\Webapplikasjoner\Visual studio\HardBank oblig 2\Hard-Bank\HardBank\BLL\obj\Debug\BLL.pdb
