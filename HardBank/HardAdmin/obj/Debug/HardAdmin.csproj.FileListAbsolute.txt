@@ -50,3 +50,9 @@ X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\Sys
 X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\obj\Debug\HardAdmin.csprojResolveAssemblyReference.cache
 X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\obj\Debug\HardAdmin.dll
 X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\obj\Debug\HardAdmin.pdb
+X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\BLL.dll
+X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\DAL.dll
+X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\Model.dll
+X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\BLL.pdb
+X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\DAL.pdb
+X:\DATA INGENIØR HIOA\05 - Webapplikasjoner\Hardbank\HardBank\HardAdmin\bin\Model.pdb
