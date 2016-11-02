@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Model;
+using System.Web.Services;
 
 namespace HardAdmin.Controllers
 {
@@ -15,9 +16,6 @@ namespace HardAdmin.Controllers
             return View();
         }
 
-        public ActionResult Login(Admin form)
-        {
-            return View();
-        }
+
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Services;
 
 namespace HardAdmin.Controllers
 {
@@ -13,6 +14,19 @@ namespace HardAdmin.Controllers
         {
             return View();
         }
+
+
+        [WebMethod]
+        public bool Login(string username, string password)
+        {
+            if (username.Equals("admin") && password.Equals("admin"))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
 
 
 
