@@ -157,6 +157,7 @@ namespace HardBank
             }
         }
 
+
         public bool nyKonto(Kunder eier, int belop, string navn)
         {
             var nyKonto = new Kontoer()

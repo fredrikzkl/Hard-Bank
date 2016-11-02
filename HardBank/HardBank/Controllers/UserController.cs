@@ -271,6 +271,30 @@ namespace HardBank.Controllers
 
         }
 
+        [HttpPost]
+        public ActionResult LeggTilKonto(Konto form)
+        {
+            try
+            {
+                using (var database = new BankContext())
+                {
+                    var nyKonto = new Kontoer();
+                    nyKonto.KontoNavn = form.kontoNavn;
+                    nyKonto.KundeId = (string)Session["Id"];
+                    nyKonto.Saldo = 0;
+
+                    database.Kontoer.Add(nyKonto);
+                    database.SaveChanges();
+
+                    return RedirectToAction("MinSide", new { id = Session["Id"] });
+
+                }
+            }
+            catch (Exception feil) { return RedirectToAction("Error", new { message = "Kunne ikke åpne konto!" + feil }); }
+        }
+
+
+
         public ActionResult SletteBetaling(int id)
         {
             checkSession();

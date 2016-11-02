@@ -44,8 +44,12 @@
                     </tbody>
                 </table>
             </div>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Åpne konto</button>
             </div>
+
         </div>
+
+        
 
 
         <div class="container" id="minsideTab">
@@ -91,3 +95,28 @@
 
 <script type="text/javascript" src="~/Scripts/minSide.js"></script>
 
+@using (Html.BeginForm("LeggTilKonto", "User", FormMethod.Post))
+{
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Åpne konto</h4>
+            </div>
+            <div class="modal-body">
+                
+                
+                    <label>Kontonavn</label>
+                    <input name="kontoNavn" id="kontonavn" type="text" class="form-control" placeholder="Skriv inn kontonavn" />
+
+                    <br />
+                    <input type="submit" value="Åpne konto"
+                           class="submit btn btn-primary special-submit" />
+               
+            </div>
+        </div>
+    </div>
+</div>
+}
