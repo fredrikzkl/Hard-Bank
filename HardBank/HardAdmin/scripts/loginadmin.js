@@ -20,7 +20,8 @@ function submit() {
         contentType: "application/json; charset=utf-8"
         }).done(function(result){
             if (result == "True") {
-                alert("Success");
+                var url = "/Admin/AdminSide";
+                window.location.href = url;
             } else {
                 $('#inputPassord').val('');
                 $('#loginFailModal').modal("show");

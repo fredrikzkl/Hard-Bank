@@ -17,6 +17,15 @@ namespace DAL
 
     }
 
+    public class Administratorer
+    {
+        [Key]
+        public string Brukernavn { get; set; }
+        public byte[] Passord { get; set; }
+        public string Email { get; set; }
+
+    }
+
     public class Kontoer
     {
         [Key]
@@ -52,6 +61,8 @@ namespace DAL
         public DbSet<Betalinger> Betalinger { get; set; }
 
         public DbSet<Kontoer> Kontoer { get; set; }
+
+        public DbSet<Kontoer> Administratorer { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
