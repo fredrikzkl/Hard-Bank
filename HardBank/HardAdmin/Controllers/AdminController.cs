@@ -1,8 +1,12 @@
-﻿using System;
+using System;
+using DAL;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HardAdmin.Models;
+using HardBank;
+using HardBank.Models;
 using System.Web.Services;
 
 namespace HardAdmin.Controllers
@@ -12,9 +16,12 @@ namespace HardAdmin.Controllers
         // GET: Admin
         public ActionResult AdminSide()
         {
-            return View();
+            var db = new BankContext();
+            List<Betalinger> bl = db.Betalinger.ToList();
+            AdminSideModel model = new AdminSideModel(bl);
+           
+            return View(model);
         }
-
 
         [WebMethod]
         public bool Login(string username, string password)
@@ -27,10 +34,10 @@ namespace HardAdmin.Controllers
             return false;
         }
 
-
-
-
-
+        public ActionResult GetPartial()
+        {
+            return PartialView("_RegBetalingPartial");
+        }
 
     }
 }

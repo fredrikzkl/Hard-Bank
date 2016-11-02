@@ -1,6 +1,62 @@
-﻿
+
+@using HardAdmin.Models;
+@model HardAdmin.Models.AdminSideModel
+
 @{
     ViewBag.Title = "AdminSide";
 }
 
-<h2>Administrajon siden</h2>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="~/Content/AdminSide.css">
+    <script type="text/javascript" src="~/Scripts/AdminSide.js"></script>
+</head>
+
+
+<div >
+    <div id="mySidenav" class="sidenav" style="width: 250px;">
+        <a><img class="img-circle img-responsive img-center" style="height:150px; width:150px;" src="~/Content/img/adminIMG.png" alt=""></a>
+        <a href="#">Admin</a>
+        <a href="javascript:void(0);" class="getProducts" id="trans">Transaksjoner</a>
+        <a href="#">Betalt</a>
+        <a href="#">Noe annet</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Skjul</a>
+    </div>
+    <div style="margin-top:20px;">
+        <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Meny</span>
+    </div>
+    <div id="main" style="margin-left:250px;">
+        
+        <h2>AdminSide</h2>
+        Dette er admin siden nå som du har logget inn.
+
+        <div id="productsPlace">
+        </div>
+
+        
+
+        <div>
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Kro Production</p>
+            </footer>
+        </div>
+
+    </div>
+    
+</div>
+
+
+
+<script type="text/javascript">
+    document.getElementById("trans").onclick = function() {trans()};
+
+    function trans() {
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("GetPartial","Admin")'}).done(function(result) {
+                $('#productsPlace').html(result);
+            })
+    }
+    
+</script>
