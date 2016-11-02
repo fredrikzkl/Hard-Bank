@@ -13,7 +13,14 @@ namespace HardAdmin.Controllers
         // GET: Index
         public ActionResult Index()
         {
-            return View();
+            if(Session["LoggedIn"] != null)
+            {
+                return RedirectToAction("AdminSide", "Admin");
+            }
+            else
+            {
+                return View();
+            }
         }
 
 

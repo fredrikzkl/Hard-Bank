@@ -20,12 +20,32 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("HardAdmin", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @if (Session["LoggedIn"] != null)
+                {
+                    @Html.ActionLink("HardAdmin", "Index", "", new { area = "" }, new { @class = "navbar-brand" })
+                }
+                else
+                {
+                    @Html.ActionLink("HardAdmin", "AdminSide", "Admin", new { area = "" }, new { @class = "navbar-brand" })
+                }
+
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                   <li>
+                       @if (Session["LoggedIn"] != null)
+                       {
+                           @Html.ActionLink("Logg Ut", "Logout", "Admin", new { @class = "a" })
+
+                       }
+                   </li>
+               </ul>
+               
             </div>
+
+            
         </div>
     </div>
 
