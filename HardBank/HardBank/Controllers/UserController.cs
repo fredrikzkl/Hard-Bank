@@ -134,7 +134,7 @@ namespace HardBank.Controllers
             {
                 Session["LoggetInn"] = true;
                 ViewBag.Innlogget = true;
-                var db = new DBKunde();
+                var db = new BankService();
                 string kundeId = (string)Session["tempId"];
                 ViewBag.Id = kundeId;
                 Session["Id"] = kundeId;
@@ -202,7 +202,7 @@ namespace HardBank.Controllers
 
                 if (loggetInn)
                 {
-                    var db = new DBKunde();
+                    var db = new BankService();
                     var kunde = db.hentKunde(id);
                     List<Betaling> bl = db.hentBetalinger(id);
                     List<Kontoer> k1 = db.hentKontoer(kunde);
@@ -299,7 +299,7 @@ namespace HardBank.Controllers
         {
             checkSession();
 
-            var db = new DBKunde();
+            var db = new BankService();
             bool slettOK = db.slettBetaling(id);
             if (slettOK)
             {
@@ -317,7 +317,7 @@ namespace HardBank.Controllers
 
             if (ModelState.IsValid)
             {
-                var kundeDb = new DBKunde();
+                var kundeDb = new BankService();
                 bool endringOK = kundeDb.endreBetaling(id, endring);
                 if (endringOK)
                 {

@@ -51,7 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminRepository.cs" />
+    <Compile Include="AdminRepositoryStub.cs" />
     <Compile Include="BankContext.cs" />
+    <Compile Include="BankRepository.cs" />
+    <Compile Include="IAdminRepository.cs" />
+    <Compile Include="IBankRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

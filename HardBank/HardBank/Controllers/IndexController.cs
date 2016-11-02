@@ -20,7 +20,7 @@ namespace HardBank.Controllers
         {
             checkSession();
 
-            var nyAntall = new DBKunde();
+            var nyAntall = new BankService();
             int tell = nyAntall.antallKunder();
 
             ViewBag.OmOss = tell;

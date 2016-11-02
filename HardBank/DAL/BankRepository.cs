@@ -1,30 +1,14 @@
-﻿using DAL;
-
-using HardBank.Models;
-
+﻿using HardBank.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using static DAL.BankContext;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace HardBank
+namespace DAL
 {
-    public class BankService
+    public class BankRepository : IBankRepository
     {
-        private IBankRepository _repository;
-
-        public BankService()
-        {
-            _repository = new BankRepository();
-        }
-
-        public BankService(IBankRepository stub)
-        {
-            _repository = stub;
-        }
-
-
         public int antallKunder()
         {
             var db = new BankContext();
@@ -39,7 +23,7 @@ namespace HardBank
                 Fornavn = innKunde.fornavn,
                 Etternavn = innKunde.etternavn,
                 Adresse = innKunde.adresse,
-                
+
                 PersonNr = innKunde.personnr
 
             };
@@ -51,7 +35,7 @@ namespace HardBank
                 db.SaveChanges();
                 return true;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return false;
             }
@@ -68,12 +52,12 @@ namespace HardBank
                 fornavn = k.Fornavn,
                 etternavn = k.Etternavn,
                 adresse = k.Adresse,
-               
+
             }
             ).ToList();
             return alleKunder;
-        
-            
+
+
         }
 
         public Kunde hentKunde(string id)
@@ -155,8 +139,8 @@ namespace HardBank
             try
             {
                 Betalinger endreKunde = db.Betalinger.Find(id);
-                
-                if(endring.dato != null) endreKunde.Dato = endring.dato;
+
+                if (endring.dato != null) endreKunde.Dato = endring.dato;
                 if (endring.kid != null) endreKunde.Kid = endring.kid;
                 if (endring.belop != null) endreKunde.Belop = endring.belop;
 
@@ -176,7 +160,7 @@ namespace HardBank
             {
                 KontoNavn = navn,
                 Saldo = belop,
-                KundeId= eier.PersonNr,
+                KundeId = eier.PersonNr,
             };
 
             var db = new BankContext();
@@ -198,6 +182,5 @@ namespace HardBank
             var query = db.Kontoer.Where(k => k.KundeId == kunden.personnr).ToList();
             return query;
         }
-
     }
 }
