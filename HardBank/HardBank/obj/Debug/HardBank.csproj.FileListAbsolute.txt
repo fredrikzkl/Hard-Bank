@@ -72,3 +72,9 @@ C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Ban
 C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\HardBank\obj\Debug\HardBank.dll
 C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\HardBank\obj\Debug\HardBank.pdb
 C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\HardBank\obj\Debug\HardBank.csprojResolveAssemblyReference.cache
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\HardBank\bin\BLL.dll
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\HardBank\bin\DAL.dll
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\HardBank\bin\Model.dll
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\HardBank\bin\BLL.pdb
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\HardBank\bin\DAL.pdb
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\HardBank\bin\Model.pdb

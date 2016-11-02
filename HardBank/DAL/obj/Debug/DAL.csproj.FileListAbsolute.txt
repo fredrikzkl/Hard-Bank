@@ -10,3 +10,15 @@ C:\Users\Fredrik\Documents\Hard-Bank\HardBank\DAL\bin\Debug\EntityFramework.SqlS
 C:\Users\Fredrik\Documents\Hard-Bank\HardBank\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Fredrik\Documents\Hard-Bank\HardBank\DAL\obj\Debug\DAL.dll
 C:\Users\Fredrik\Documents\Hard-Bank\HardBank\DAL\obj\Debug\DAL.pdb
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\DAL\bin\Debug\DAL.dll.config
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\DAL\bin\Debug\DAL.dll
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\DAL\bin\Debug\DAL.pdb
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\DAL\bin\Debug\Model.dll
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\DAL\bin\Debug\Model.pdb
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\DAL\obj\Debug\DAL.dll
+C:\Users\Fredrik Kloster\Documents\Visual Studio 2015\Projects\Hardbank\Hard-Bank\HardBank\DAL\obj\Debug\DAL.pdb

@@ -15,9 +15,6 @@ namespace HardAdmin.Controllers
             return View();
         }
 
-        public ActionResult Login(Admin form)
-        {
-            return View();
-        }
+
     }
 }
