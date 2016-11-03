@@ -8,6 +8,7 @@ using HardAdmin.Models;
 using HardBank;
 using HardBank.Models;
 using System.Web.Services;
+using BLL;
 
 namespace HardAdmin.Controllers
 {
@@ -16,7 +17,6 @@ namespace HardAdmin.Controllers
         // GET: Admin
         public ActionResult AdminSide()
         {
-            var user = Session["LoggedIn"]; //Dette skal byttes til "hent bruker med dette navnet"
             if (Session["LoggedIn"] != null) //Dette skal sjekke om den innloggede sitt navn er likt session 
             {
                 var db = new BankContext();
@@ -33,14 +33,18 @@ namespace HardAdmin.Controllers
         [WebMethod]
         public bool Login(string username, string password)
         {
-            if (username.Equals("admin") && password.Equals("admin"))
+           
+           var db = new AdminService();
+            if (db.validateLogin(username, password))
             {
                 Session["LoggedIn"] = username;
                 return true;
             }
-
+            
             return false;
         }
+
+      
 
         public ActionResult Logout()
         {

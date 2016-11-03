@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBaseInitializer.cs" />
     <Compile Include="AdminRepository.cs" />
     <Compile Include="AdminRepositoryStub.cs" />
     <Compile Include="BankContext.cs" />
