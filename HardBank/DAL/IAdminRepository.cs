@@ -8,5 +8,9 @@ namespace DAL
 {
     public interface IAdminRepository
     {
+        Administratorer hentAdmin(string username);
+        bool brukerFinnes(string username);
+        List<Betalinger> hentAlleBetalinger();
+        List<Betalinger> hentAlleBetalingerFraKonto(string fraKontonr);
     }   
 }

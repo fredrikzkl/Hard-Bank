@@ -14,13 +14,26 @@ namespace HardAdmin.Controllers
 {
     public class AdminController : Controller
     {
+
+        private IAdminService _adminService;
+
+        public AdminController()
+        {
+            _adminService = new AdminService();
+        }
+
+        public AdminController(IAdminService stub)
+        {
+            _adminService = stub;
+        }
+
         // GET: Admin
         public ActionResult AdminSide()
         {
             if (Session["LoggedIn"] != null) //Dette skal sjekke om den innloggede sitt navn er likt session 
             {
                 var db = new BankContext();
-                List<Betalinger> bl = db.Betalinger.ToList();
+                List<Betalinger> bl = _adminService.hentAlleBetalinger();
                 AdminSideModel model = new AdminSideModel(bl);
 
                 return View(model);
@@ -33,9 +46,7 @@ namespace HardAdmin.Controllers
         [WebMethod]
         public bool Login(string username, string password)
         {
-           
-           var db = new AdminService();
-            if (db.validateLogin(username, password))
+            if (_adminService.validateLogin(username, password))
             {
                 Session["LoggedIn"] = username;
                 return true;

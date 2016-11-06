@@ -5,11 +5,24 @@ using System.Web;
 using System.Web.Mvc;
 using Model;
 using System.Web.Services;
+using BLL;
 
 namespace HardAdmin.Controllers
 {
     public class IndexController : Controller
     {
+        private IAdminService _adminService;
+
+        public IndexController()
+        {
+            _adminService = new AdminService();
+        }
+
+        public IndexController(IAdminService stub)
+        {
+            _adminService = stub;
+        }
+
         // GET: Index
         public ActionResult Index()
         {

@@ -24,28 +24,12 @@ namespace BLL
 
         public Administratorer hentAdmin(string username)
         {
-            using (var db = new BankContext())
-            {
-                var admin = db.Administratorer.Where(a => a.brukernavn == username).First();
-                return admin;
-            }
+            return _repository.hentAdmin(username);
         }
 
         public bool brukerFinnes(string username)
         {
-            using (var db = new BankContext())
-            {
-                Administratorer funnetBruker = db.Administratorer.FirstOrDefault
-                (a => a.brukernavn == username);
-                if (funnetBruker == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-            }
+            return _repository.brukerFinnes(username);
         }
 
         public bool validateLogin(string username, string password)
@@ -62,6 +46,16 @@ namespace BLL
             return false;
         }
 
+        public List<Betalinger> hentAlleBetalinger()
+        {
+            return _repository.hentAlleBetalinger();
+        }
+
+        public List<Betalinger> hentAlleBetalingerFraKonto(string fraKontonr)
+        {
+            return _repository.hentAlleBetalingerFraKonto(fraKontonr);
+        }
+
         private static byte[] lagHash(string innPassord)
         {
             byte[] innData, utData;
@@ -70,6 +64,7 @@ namespace BLL
             utData = algoritme.ComputeHash(innData);
             return utData;
         }
+
 
 
     }

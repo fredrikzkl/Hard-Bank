@@ -98,8 +98,6 @@ namespace DAL
 
     public class BankContext : DbContext
     {
-        
-
         public BankContext()
         : base("name=Bank")
         {
