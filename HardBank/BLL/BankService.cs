@@ -22,7 +22,6 @@ namespace HardBank
             _repository = stub;
         }
 
-
         public int antallKunder()
         {
             var db = new BankContext();
@@ -196,6 +195,5 @@ namespace HardBank
             var query = db.Kontoer.Where(k => k.KundeId == kunden.personnr).ToList();
             return query;
         }
-
     }
 }
