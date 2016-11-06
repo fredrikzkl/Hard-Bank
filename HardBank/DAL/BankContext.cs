@@ -38,6 +38,15 @@ namespace DAL
         public string KundeId { get; set; }
     }
 
+    public class Administratorer
+    {
+        [Key]
+        public string brukernavn { get; set; }
+        public byte[] passord { get; set; }
+        public string email { get; set; }
+
+    }
+
     public class BankContext : DbContext
     {
         
@@ -45,13 +54,17 @@ namespace DAL
         public BankContext()
         : base("name=Bank")
         {
-            Database.CreateIfNotExists();
+            //Database.CreateIfNotExists();
+            Database.SetInitializer<BankContext>(new DataBaseInitializer());
         }
+
         public DbSet<Kunder> Kunder{ get; set; }
 
         public DbSet<Betalinger> Betalinger { get; set; }
 
         public DbSet<Kontoer> Kontoer { get; set; }
+
+        public DbSet<Administratorer> Administratorer { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
