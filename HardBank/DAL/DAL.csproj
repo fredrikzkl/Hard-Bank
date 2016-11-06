@@ -64,12 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBaseInitializer.cs" />
-    <Compile Include="AdminRepository.cs" />
-    <Compile Include="AdminRepositoryStub.cs" />
+    <Compile Include="Admin\AdminRepository.cs" />
+    <Compile Include="Admin\AdminRepositoryStub.cs" />
     <Compile Include="BankContext.cs" />
-    <Compile Include="BankRepository.cs" />
-    <Compile Include="IAdminRepository.cs" />
-    <Compile Include="IBankRepository.cs" />
+    <Compile Include="Bank\BankRepository.cs" />
+    <Compile Include="Admin\IAdminRepository.cs" />
+    <Compile Include="Bank\IBankRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

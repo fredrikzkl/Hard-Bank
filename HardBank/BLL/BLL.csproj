@@ -61,10 +61,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminService.cs" />
-    <Compile Include="BankService.cs" />
-    <Compile Include="IAdminService.cs" />
-    <Compile Include="IBankService.cs" />
+    <Compile Include="Admin\AdminService.cs" />
+    <Compile Include="Bank\BankService.cs" />
+    <Compile Include="Admin\IAdminService.cs" />
+    <Compile Include="Bank\IBankService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +81,7 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
